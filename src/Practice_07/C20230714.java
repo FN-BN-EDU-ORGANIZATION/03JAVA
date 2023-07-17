@@ -6,69 +6,61 @@ package Practice_07;
 public class C20230714 {
 	public static void main(String[] args) {
 
-//		채팅서버 만들기
-//		서버와 클라이언트 둘다 통신 구현
-//		서버 연결
-//		서버 출력 -> 클라이언트 수신 -> 클라이언트 출력 -> 서버 수신
+//		계산기 만들기
 		
-		
-//		Thread receiveThread = new Thread(() -> {
-//		클라이언트 수신하고 출력위한 스레드 생성
-//            try {
-//                while (true) {
-//                    String message = scanner.nextLine();
-//                    System.out.println("클라이언트: " + message);
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        });
-//		데이터 읽어오기
-//        receiveThread.start();
+//		public class Calculator {
+//		    public static void main(String[] args) {
+//		        Scanner scanner = new Scanner(System.in);
 //
-//      사용자 입력을 받아서 클라이언트로 메시지를 전송합니다.
-//        Scanner userInputScanner = new Scanner(System.in);
-//        while (true) {
-//            String message = userInputScanner.nextLine();
-//            writer.println(message);
-//        }
-//    } catch (IOException e) {
-//        e.printStackTrace();
-//    }
-//}		메세지 수신받고 입력한 텍스트를 전송
-//}
-		
-//		Thread receiveThread = new Thread(() -> {
-//            try {
-//                while (true) {
-//                    String message = scanner.nextLine();
-//                    System.out.println("서버: " + message);
-//                }
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        });
-//		서버로부터 메시지를 수신하고 출력할수있게 생성
-//        receiveThread.start();
+//		        System.out.print("첫 번째 숫자를 입력하세요: ");
+//		        double num1 = scanner.nextDouble();
 //
-//      사용자 입력을 받아서 서버로 메시지를 전송합니다.
-//        Scanner userInputScanner = new Scanner(System.in);
-//        while (true) {
-//            String message = userInputScanner.nextLine();
-//            writer.println(message);
-//        }
-//    } catch (IOException e) {
-//        e.printStackTrace();
+//		        System.out.print("두 번째 숫자를 입력하세요: ");
+//		        double num2 = scanner.nextDouble();
+//
+//		        System.out.print("연산자를 입력하세요 (+, -, *, /): ");
+//		        char operator = scanner.next().charAt(0);
+//
+//		        double result;
+//		Scanner 클래스로 입력받음
+//
+//		        switch {
+//		            case '+':
+//		                result = num1 + num2;
+//		                System.out.println("결과: " + result);
+//		                break;
+//		            case '-':
+//		                result = num1 - num2;
+//		                System.out.println("결과: " + result);
+//		                break;
+//		            case '*':
+//		                result = num1 * num2;
+//		                System.out.println("결과: " + result);
+//		                break;
+//		            case '/':
+//		                if (num2 != 0) {
+//		                    result = num1 / num2;
+//		                    System.out.println("결과: " + result);
+//		                } else {
+//		                    System.out.println("0으로 못나눔.");
+//		                }
+//		                break;
+//		            default:
+//		                System.out.println("유효하지 않음.");
+//		        }
+//		    }
+//		}
+//		입력받은걸 num1,num2에 저장 이후 기호 입력받아서
+//		각각의 연산자에 맞게 계산
+//		/ 나누기 같은 경우 0인지 확인
+//		해당되는게 없으면 X
+		
+//		if (userAnswer == correctAnswer) {
+//        System.out.println("정답입니다!");
+//    } else {
+//        System.out.println("오답입니다!");
 //    }
-//		서버로부터 메세지 수신하고 스레드 실행
-//		반복하여서 전송
-		
-//}
-//}
-		
-		
-		
-		
+//		입력받은 수에 문제내서 정확한답이면 변수저자된 correctAnswer
 	}	
 		
 	
