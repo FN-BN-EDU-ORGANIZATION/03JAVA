@@ -57,63 +57,7 @@ class Cat extends Animal implements Sound {
     }
 }
 
-public class Example7 {
-    public static void main(String[] args) {
-        try {
-            int result = divide(10, 0); // 0으로 나누는 메서드를 호출합니다.
-            System.out.println("결과: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("0으로 나눌 수 없습니다.");
-        }
-    }
 
-    public static int divide(int a, int b) {
-        return a / b; // 0으로 나누는 예외 상황을 처리하지 않고 던집니다.
-    }
-}
-
-
-
-
-
-public class Example8 {
-    public static void main(String[] args) {
-        try {
-            File file = new File("example.txt"); // example.txt 파일을 생성합니다.
-            FileWriter writer = new FileWriter(file); // 파일에 데이터를 쓰기 위한 FileWriter 객체를 생성합니다.
-            writer.write("Hello, Java!"); // 파일에 데이터를 씁니다.
-            writer.close(); // 파일을 닫습니다.
-
-            FileReader reader = new FileReader(file); // 파일에서 데이터를 읽기 위한 FileReader 객체를 생성합니다.
-            int data = reader.read(); // 파일에서 데이터를 읽습니다.
-            while (data != -1) {
-                System.out.print((char) data); // 읽은 데이터를 출력합니다.
-                data = reader.read(); // 다음 데이터를 읽습니다.
-            }
-            reader.close(); // 파일을 닫습니다.
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
- 스레드 생성과 실행
-
-
-public class Example9 {
-    public static void main(String[] args) {
-        Thread thread = new MyThread(); // MyThread 클래스로부터 스레드 객체를 생성합니다.
-        thread.start(); // 스레드를 실행합니다.
-    }
-}
-
-class MyThread extends Thread {
-    @Override
-    public void run() {
-        for (int i = 0; i < 5; i++) {
-            System.out.println("스레드 실행 중: " + i);
-            try {
-                Thread.sleep(500); // 500ms 동안 스레드를 일시 정지합니다.
-            } catch (InterruptedException
 
 
 
