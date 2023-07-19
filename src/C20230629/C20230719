@@ -1,0 +1,44 @@
+public class StringReversal {
+    // 문자열을 역순으로 출력하는 메서드
+    public static void reverseString(String str) {
+        for (int i = str.length() - 1; i >= 0; i--) {
+            System.out.print(str.charAt(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        reverseString("Hello"); // olleH
+    }
+}
+public class Factorial {
+    // 팩토리얼을 계산하는 재귀 함수
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int result = factorial(5);
+        System.out.println("팩토리얼: " + result); // 팩토리얼: 120
+    }
+}
+public class Calculator {
+    // 두 정수를 더하는 메서드
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int result = add(5, 10);
+        System.out.println("결과: " + result); // 결과: 15
+    }
+}
+
+
+
+
+
+
