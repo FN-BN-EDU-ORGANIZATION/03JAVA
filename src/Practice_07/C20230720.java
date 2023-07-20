@@ -6,7 +6,7 @@ package Practice_07;
 public class C20230720 {
 	public static void main(String[] args) {
 
-		07/20
+//		07/20
 
 //		QnA Dao,Dto 수정 전에 복습
 
