@@ -1,0 +1,68 @@
+public class Fibonacci {
+    // 피보나치 수열을 계산하는 재귀 함수
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 6;
+        int result = fibonacci(n);
+        System.out.println(n + "번째 피보나치 수: " + result); // 6번째 피보나치 수: 8
+    }
+}
+public class PrimeNumberChecker {
+    // 소수를 판별하는 함수
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 17;
+        boolean isPrime = isPrime(number);
+        System.out.println(number + "은(는) 소수인가? " + isPrime); // 17은(는) 소수인가? true
+    }
+}
+class Person {
+    private String name;
+    private int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class ObjectComparison {
+    public static void main(String[] args) {
+        Person person1 = new Person("Alice", 25);
+        Person person2 = new Person("Bob", 30);
+
+        if (person1.equals(person2)) {
+            System.out.println("두 사람은 같습니다.");
+        } else {
+            System.out.println("두 사람은 다릅니다.");
+        }
+    }
+}
