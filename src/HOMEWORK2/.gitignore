@@ -22,3 +22,16 @@
 /Product.class
 /TV.class
 /Audio.class
+/C20230720.class
+/Attackable.class
+/Fightable.class
+/Fighter.class
+/Movable.class
+/Unit.class
+/AirUnit.class
+/Dropship.class
+/GroundUnit.class
+/Marine.class
+/Repairable.class
+/SCV.class
+/Tank.class
