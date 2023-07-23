@@ -46,7 +46,7 @@ public class C20230717 {
 		System.out.println(a);
 		for(int i=0; i<5;i++) {
 	}
-//		System.out.println(i); 컴파일 에러
+		//System.out.println(i); //컴파일 에러
 	}
 	//위의 소스코드처럼 a라는 변수는 main메소드가 호출될 때 Stack영역에 할당되고 종료시 해제된다.
 	//또한 a라는 변수의 값이 5,4,3,2순으로 값을 할당하였고, 출력되는 값은 2가 출력됨.

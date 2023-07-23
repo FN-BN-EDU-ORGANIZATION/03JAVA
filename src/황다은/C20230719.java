@@ -4,8 +4,8 @@ public class C20230719 {
 	// 메모리구조
 	//stack영역에 초기화진행되지 않는 예시
 	public void method() {
-		int localVar;	// 스택영역에서 저장된 지역변수, 초기화 되지 않음
-		//System.out.println(localVar);//초기화 되지않은 변수이므로 에러!!
+		int localVar=0;	// 스택영역에서 저장된 지역변수, 초기화 되지 않음
+		System.out.println(localVar);//초기화 되지않은 변수이므로 에러!!
 	}
 	
 	//힙영역 예시
@@ -21,17 +21,26 @@ public class C20230719 {
 		
 		
 		String add1 = new String("Hwang");
-		String add2 = new String("Hwamg");
+		String add2 = new String("Hwang");
 		
 		if(add1 == add2) {
 			System.out.println("같음");
 		}else {
 			System.out.println("다름");
 		}
+		/*
+		 * if (add1.equals(add2)) {
+    System.out.println("같음");
+} else {
+    System.out.println("다름");
+}
+		 * */		
+		//결과는 다름 나옴 왜그러냐면 heap영역의 주소값이 서로 달라서 그럼
 		
-		//다름 나옴 왜그러냐면 heap영역의 주소값이 서로 달라서 그럼
 		System.out.println("add1의 주소값 : " + System.identityHashCode(add1));
+		// 결과 값 : 1485955886
 		System.out.println("add1의 주소값 : " + System.identityHashCode(add2));
+		// 결과 값 : 212921632
 	}
 
 }
