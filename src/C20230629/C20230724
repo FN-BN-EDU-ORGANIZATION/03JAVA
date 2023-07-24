@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+// 팩토리얼 함수 정의
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int num;
+    printf("양의 정수를 입력하세요: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("음수는 팩토리얼을 계산할 수 없습니다.\n");
+        return 1;
+    }
+
+    int result = factorial(num);
+    printf("%d! = %d\n", num, result);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int size, i;
+    int sum = 0;
+
+    printf("배열 크기를 입력하세요: ");
+    scanf("%d", &size);
+
+    int arr[size];
+
+    printf("배열 요소를 입력하세요: ");
+    for (i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    double average = (double)sum / size;
+
+    printf("합 = %d, 평균 = %.2lf\n", sum, average);
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int target, guess, attempts = 0;
+    srand(time(NULL)); // 난수 생성을 위한 시드 설정
+
+    target = rand() % 100 + 1; // 1부터 100 사이의 난수 생성
+
+    printf("1부터 100 사이의 숫자를 맞춰보세요.\n");
+
+    do {
+        printf("추측한 숫자: ");
+        scanf("%d", &guess);
+        attempts++;
+
+        if (guess > target)
+            printf("더 작은 숫자입니다.\n");
+        else if (guess < target)
+            printf("더 큰 숫자입니다.\n");
+        else
+            printf("정답입니다! %d번의 시도로 맞추었습니다.\n", attempts);
+
+    } while (guess != target);
+
+    return 0;
+}
