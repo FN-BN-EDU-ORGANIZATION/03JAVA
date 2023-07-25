@@ -1,0 +1,75 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char str[]) {
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+        char temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
+        left++;
+        right--;
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("문자열을 입력하세요: ");
+    fgets(str, sizeof(str), stdin);
+
+    // 개행 문자 제거
+    if (str[strlen(str) - 1] == '\n')
+        str[strlen(str) - 1] = '\0';
+
+    reverseString(str);
+    printf("뒤집힌 문자열: %s\n", str);
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPrime(int num) {
+    if (num <= 1)
+        return false;
+    
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+    
+    return true;
+}
+
+int main() {
+    int num;
+    printf("양의 정수를 입력하세요: ");
+    scanf("%d", &num);
+
+    if (isPrime(num))
+        printf("%d은(는) 소수입니다.\n", num);
+    else
+        printf("%d은(는) 소수가 아닙니다.\n", num);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("양의 정수를 입력하세요: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        printf("%d 단:\n", i);
+        for (int j = 1; j <= 9; j++) {
+            printf("%d * %d = %d\n", i, j, i * j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
