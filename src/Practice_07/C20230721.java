@@ -5,7 +5,7 @@ package Practice_07;
 
 public class C20230721 {
 	public static void main(String[] args) {
-//		챗GPT검색하여 내용가져올수있음
+
 		
 //		07/23
 
