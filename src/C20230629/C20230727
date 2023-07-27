@@ -1,0 +1,94 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("양의 정수를 입력하세요: ");
+    scanf("%d", &n);
+
+    int sum = 0;
+    int product = 1;
+
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+        product *= i;
+    }
+
+    printf("합 = %d, 곱 = %d\n", sum, product);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    FILE *inputFile, *outputFile;
+    int num, sum = 0, count = 0;
+
+    inputFile = fopen("input.txt", "r");
+    outputFile = fopen("output.txt", "w");
+
+    if (inputFile == NULL || outputFile == NULL) {
+        printf("파일을 열 수 없습니다.\n");
+        return 1;
+    }
+
+    while (fscanf(inputFile, "%d", &num) != EOF) {
+        sum += num;
+        count++;
+    }
+
+    fclose(inputFile);
+
+    if (count > 0) {
+        double average = (double)sum / count;
+        fprintf(outputFile, "합 = %d, 평균 = %.2lf\n", sum, average);
+    } else {
+        fprintf(outputFile, "파일에 숫자가 없습니다.\n");
+    }
+
+    fclose(outputFile);
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void reverseString(char *str) {
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+        char temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
+        left++;
+        right--;
+    }
+}
+
+int main() {
+    int length;
+    printf("문자열의 길이를 입력하세요: ");
+    scanf("%d", &length);
+
+    // 개행 문자 제거
+    while (getchar() != '\n')
+        ;
+
+    char *inputString = (char *)malloc((length + 1) * sizeof(char));
+
+    if (inputString == NULL) {
+        printf("메모리 할당에 실패하였습니다.\n");
+        return 1;
+    }
+
+    printf("문자열을 입력하세요: ");
+    fgets(inputString, length + 1, stdin);
+
+    reverseString(inputString);
+    printf("뒤집힌 문자열: %s\n", inputString);
+
+    free(inputString);
+
+    return 0;
+}
