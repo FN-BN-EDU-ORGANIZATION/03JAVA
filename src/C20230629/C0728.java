@@ -5,7 +5,7 @@ public class C0728 {
 	public static void main(String[] args) {
 		
 //		예제1 - 프로그래머스(편지)
-//		예제2 - 
+//		예제2 - 중복된 숫자 개수
 
 	}
     public int 예제1(String message) {
