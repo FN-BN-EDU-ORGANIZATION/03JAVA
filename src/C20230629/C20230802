@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPrime(int num) {
+    if (num <= 1)
+        return false;
+
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+int main() {
+    int n;
+    printf("정수 n을 입력하세요: ");
+    scanf("%d", &n);
+
+    printf("2부터 %d까지의 소수: ", n);
+    for (int i = 2; i <= n; i++) {
+        if (isPrime(i))
+            printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+    printf("첫 번째 배열 크기 (행 열): ");
+    scanf("%d %d", &rows, &cols);
+
+    int matrix1[rows][cols];
+    printf("첫 번째 배열 요소 입력: ");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix1[i][j]);
+        }
+    }
+
+    int matrix2[rows][cols];
+    printf("두 번째 배열 요소 입력: ");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
+
+    int sum[rows][cols];
+    int product[rows][cols];
+
+    printf("덧셈 결과:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sum[i][j] = matrix1[i][j] + matrix2[i][j];
+            printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n곱셈 결과:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            product[i][j] = matrix1[i][j] * matrix2[i][j];
+            printf("%d ", product[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+#include <string.h>
+
+void replaceString(char *str, const char *old_string, const char *new_string) {
+    char *found;
+    int old_len = strlen(old_string);
+    int new_len = strlen(new_string);
+
+    while ((found = strstr(str, old_string)) != NULL) {
+        memmove(found + new_len, found + old_len, strlen(found + old_len) + 1);
+        memcpy(found, new_string, new_len);
+    }
+}
+
+int main() {
+    FILE *inputFile, *outputFile;
+    char buffer[1000];
+    char old_string[100], new_string[100];
+
+    inputFile = fopen("input.txt", "r");
+    outputFile = fopen("output.txt", "w");
+
+    if (inputFile == NULL || outputFile == NULL) {
+        printf("파일을 열 수 없습니다.\n");
+        return 1;
+    }
+
+    printf("찾을 문자열을 입력하세요: ");
+    scanf("%s", old_string);
+
+    printf("바꿀 문자열을 입력하세요: ");
+    scanf("%s", new_string);
+
+    while (fgets(buffer, sizeof(buffer), inputFile)) {
+        replaceString(buffer, old_string, new_string);
+        fprintf(outputFile, "%s", buffer);
+    }
+
+    fclose(inputFile);
+    fclose(outputFile);
+
+    return 0;
+}
