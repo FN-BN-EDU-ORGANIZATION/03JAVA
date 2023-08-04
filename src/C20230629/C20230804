@@ -1,0 +1,114 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("배열 크기를 입력하세요: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("배열 요소를 입력하세요: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int max = arr[0];
+    int min = arr[0];
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+        if (arr[i] < min)
+            min = arr[i];
+    }
+
+    printf("최댓값 = %d, 최솟값 = %d\n", max, min);
+
+    return 0;
+}
+#include <stdio.h>
+
+void insertionSort(int arr[], int n) {
+    int i, j, key;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    int n;
+    printf("배열 크기를 입력하세요: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("배열 요소를 입력하세요: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    insertionSort(arr, n);
+
+    printf("정렬된 배열: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+#include <stdio.h>
+
+int getDayOfWeek(int year, int month, int day) {
+    if (month < 3) {
+        month += 12;
+        year -= 1;
+    }
+    int h = (day + 2 * month + 3 * (month + 1) / 5 + year + year / 4 - year / 100 + year / 400) % 7;
+    return h;
+}
+
+int main() {
+    int year, month, day;
+    printf("년도와 월을 입력하세요 (yyyy mm): ");
+    scanf("%d %d", &year, &month);
+
+    printf("%4d년 %2d월\n", year, month);
+    printf(" 일  월  화  수  목  금  토\n");
+
+    int firstDay = getDayOfWeek(year, month, 1);
+    int lastDay;
+    if (month == 2)
+        lastDay = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ? 29 : 28;
+    else if (month == 4 || month == 6 || month == 9 || month == 11)
+        lastDay = 30;
+    else
+        lastDay = 31;
+
+    int dayOfWeek = 0;
+
+    for (int i = 0; i < firstDay; i++) {
+        printf("    ");
+        dayOfWeek++;
+    }
+
+    for (int day = 1; day <= lastDay; day++) {
+        printf("%3d ", day);
+        dayOfWeek++;
+
+        if (dayOfWeek > 6) {
+            printf("\n");
+            dayOfWeek = 0;
+        }
+    }
+
+    if (dayOfWeek != 0)
+        printf("\n");
+
+    return 0;
+}
