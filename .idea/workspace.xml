@@ -35,30 +35,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "C:/임베디드웹과정임시공유폴더/03JAVA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/임베디드웹과정임시공유폴더/WeatherForecast&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\임베디드웹과정임시공유폴더\03JAVA\src" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.C0803">
+  <component name="RunManager" selected="애플리케이션.C0807">
     <configuration name="C0801" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="C0801.C0801" />
       <module name="03JAVA" />
@@ -98,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C20230706" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="C20230706.C20230706" />
+    <configuration name="C0807" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="C0807.C0807" />
       <module name="03JAVA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="C20230706.*" />
+          <option name="PATTERN" value="C0807.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.C0807" />
         <item itemvalue="애플리케이션.C0803" />
         <item itemvalue="애플리케이션.C0802" />
         <item itemvalue="애플리케이션.C0801" />
         <item itemvalue="애플리케이션.C20230710" />
-        <item itemvalue="애플리케이션.C20230706" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +154,11 @@
       <option name="presentableId" value="Default" />
       <updated>1688047550415</updated>
       <workItem from="1691021853361" duration="13000" />
-      <workItem from="1691102258386" duration="2983000" />
+      <workItem from="1691102258386" duration="3048000" />
+      <workItem from="1691373780736" duration="3155000" />
+      <workItem from="1691388685358" duration="85000" />
+      <workItem from="1691390631443" duration="73000" />
+      <workItem from="1691446275369" duration="2113000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1688047941933</created>
@@ -207,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690934351000</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="0802">
+      <option name="closed" value="true" />
+      <created>1691105546257</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691105546257</updated>
+    </task>
+    <task id="LOCAL-00009" summary="0803">
+      <option name="closed" value="true" />
+      <created>1691105562147</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691105562147</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +241,9 @@
     <MESSAGE value="0706" />
     <MESSAGE value="0710 re-up" />
     <MESSAGE value="0801" />
-    <option name="LAST_COMMIT_MESSAGE" value="0801" />
+    <MESSAGE value="0802" />
+    <MESSAGE value="0803" />
+    <option name="LAST_COMMIT_MESSAGE" value="0803" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
