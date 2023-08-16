@@ -1,0 +1,11 @@
+1.JDK 11버전 설치
+2.이클립스 포톤 버전 설치
+	build path에서 JDK를 11버전으로 설정
+3.아파치 톰캣 설치(이 과정에서 Tomcat이 제대로 작동하는지 여부를 확인하는 startup파일이 제대로 실행되지 않는 오류를 겪었습니다.
+		환경변수에서 자바폴더가 제대로 지정되지 않은 문제를 수정하여 해결하였습니다.
+		
+아파치 톰캣을 이클립스에 연동하는 과정에서 runtime environment에 톰캣이 없는 문제 해결하다가 
+새벽3시 자러갑니다
+https://zawook.postype.com/post/7212270
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=hjinha2&logNo=221180700448
+참고 링크
